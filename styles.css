@@ -1,0 +1,126 @@
+/* Reset de estilos para asegurar consistencia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  /* Estilo para el encabezado */
+  header {
+    background-color: #2d3a3f;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header .logo h1 {
+    font-size: 3rem;  /* Tamaño de la fuente */
+    background: linear-gradient(90deg, green, orange, #00f);  /* Degradado de colores */
+    background-clip: text;  /* Aplica el fondo solo al texto */
+    color: transparent;  /* Hace que el color del texto sea transparente, dejando solo el fondo */
+    animation: sm 2s linear infinite;  /* Aplica la animación "sm" con duración de 2 segundos, repitiendo infinitamente */
+    background-size: 200% 100%;  /* Define el tamaño del fondo para que se mueva correctamente */
+  }
+  
+  /* Animación de movimiento del fondo */
+  @keyframes sm {
+    0% {
+      background-position: -100% 0%;  /* Empieza el fondo fuera de la pantalla a la izquierda */
+    }
+    100% {
+      background-position: 100% 0%;  /* Mueve el fondo hasta fuera de la pantalla a la derecha */
+    }
+  }
+  
+  /* Estilo de la sección hero */
+  .hero {
+    background: #00796b;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .hero-text h2 {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  /* Estilos para las secciones de servicio y productos */
+  .services, .products, .contact {
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .services .service-cards, .products .product-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+  }
+  
+  .card {
+    background-color: #fff;
+    padding: 20px;
+    width: 25%;
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Estilos del formulario de contacto */
+  .contact form input, .contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #00796b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #004d40;
+  }
+  
+  /* Estilos del pie de página */
+  footer {
+    background-color: #2d3a3f;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  /* Media query para pantallas pequeñas */
+  @media (max-width: 768px) {
+    header .logo h1 {
+      font-size: 2rem; /* Reducir el tamaño del texto en pantallas pequeñas */
+    }
+  
+    .services .service-cards, .products .product-cards {
+      flex-direction: column; /* Cambiar la disposición de las tarjetas a una columna */
+      align-items: center; /* Alinear las tarjetas al centro */
+    }
+  
+    .card {
+      width: 80%; /* Reducir el tamaño de las tarjetas para pantallas pequeñas */
+      margin: 10px 0;
+    }
+  }
+  
